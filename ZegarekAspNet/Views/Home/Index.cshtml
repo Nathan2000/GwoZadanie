@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<canvas id="clockFace" width="200" height="200">
+    Your browser doesn't support the Canvas element.
+</canvas>
+
+<form>
+    <p>Time: <input type="time" id="time" /></p>
+    <p>Angle: <span id="angle"></span></p>
+</form>
+
+@section scripts {
+<script type="text/javascript">
+    function redrawClockFace(clock) {
+        function drawCircle(context, x, y, radius) {
+            context.beginPath();
+            context.lineWidth = 1;
+            context.arc(x, y, radius, 0, 2 * Math.PI);
+            context.stroke();
+        }
+
+        function drawHand(context, startX, startY, endX, endY, thickness) {
+            context.beginPath();
+            context.moveTo(startX, startY);
+            context.lineTo(endX, endY);
+            context.lineWidth = thickness;
+            context.stroke();
+        }
+
+        var canvas = document.getElementById("clockFace");
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        drawCircle(context, clock.Center.X, clock.Center.Y, clock.Radius);
+        drawHand(context, clock.Center.X, clock.Center.Y, clock.LargeHandPoint.X, clock.LargeHandPoint.Y, 2);
+        drawHand(context, clock.Center.X, clock.Center.Y, clock.SmallHandPoint.X, clock.SmallHandPoint.Y, 4);
+    }
+
+    function askApiForClock(hours, minutes) {
+        var canvas = document.getElementById("clockFace");
+        $.get("http://localhost:59526/api/angle/" + hours + "/" + minutes, { width: canvas.width, height: canvas.height }, function (clock) {
+            $("#angle").text(clock.AngleDegrees);
+            redrawClockFace(clock);
+        });
+    }
+
+    function pad(number, length) {
+        return ("00" + number).slice(-length);
+    }
+
+    var now = new Date();
+    $("#time")
+        .val(pad(now.getHours(), 2) + ":" + pad(now.getMinutes(), 2))
+        .change(function () {
+            var timeArr = $(this).val().split(":");
+            askApiForClock(timeArr[0], timeArr[1]);
+        });
+    askApiForClock(now.getHours(), now.getMinutes());
+</script>
+}

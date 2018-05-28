@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZegarekWinForms", "ZegarekWinForms\ZegarekWinForms.csproj", "{36C57461-A7C4-4D98-B13A-10129B20EDD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZegarekWpf", "ZegarekWpf\ZegarekWpf.csproj", "{E6A737BF-2D1F-46A0-A98B-B25549207369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZegarekAspNet", "ZegarekAspNet\ZegarekAspNet.csproj", "{CC8B4DB5-4E81-4102-AF44-D3B005D058DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZegarekLib", "ZegarekLib\ZegarekLib.csproj", "{9590FAD7-A9A3-48F9-8FF6-C4C4F517A2DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C57461-A7C4-4D98-B13A-10129B20EDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C57461-A7C4-4D98-B13A-10129B20EDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C57461-A7C4-4D98-B13A-10129B20EDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C57461-A7C4-4D98-B13A-10129B20EDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A737BF-2D1F-46A0-A98B-B25549207369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A737BF-2D1F-46A0-A98B-B25549207369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A737BF-2D1F-46A0-A98B-B25549207369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A737BF-2D1F-46A0-A98B-B25549207369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8B4DB5-4E81-4102-AF44-D3B005D058DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8B4DB5-4E81-4102-AF44-D3B005D058DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8B4DB5-4E81-4102-AF44-D3B005D058DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8B4DB5-4E81-4102-AF44-D3B005D058DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9590FAD7-A9A3-48F9-8FF6-C4C4F517A2DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9590FAD7-A9A3-48F9-8FF6-C4C4F517A2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9590FAD7-A9A3-48F9-8FF6-C4C4F517A2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9590FAD7-A9A3-48F9-8FF6-C4C4F517A2DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FD33903-5832-4BCB-B8B2-FABDF752E5ED}
+	EndGlobalSection
+EndGlobal
